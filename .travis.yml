@@ -9,6 +9,14 @@ os:
 #  - osx
 services: 
   - mongodb
+ 
+addons:
+  apt:
+    sources:
+    - mongodb-3.4-precise
+    packages:
+    - mongodb-org-server
+ 
 smalltalk:
   - Pharo-5.0
   - Pharo-4.0
