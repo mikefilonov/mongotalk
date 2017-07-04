@@ -1,6 +1,6 @@
 operations
 lastError
 	| reply |
-	reply := self command: {'getLastError'->1} asDictionary.
+	reply := self command: (OrderedIdentityDictionary newFrom: {#getLastError->1}).
 	
 	^ MongoLastError newFor: reply
